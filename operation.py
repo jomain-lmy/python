@@ -55,10 +55,11 @@ be = re.findall("title='.*?>",data)
 # print(bd)
 
 # f.close()
-with open('1.txt', 'rt', encoding='') as f:
+with open('1.txt', 'rt', encoding='latin-1') as f:
    bd = f.read()
-
 f.close()
+
+
 
 
 
@@ -76,6 +77,10 @@ i = 1
 for x in be:
     bc = re.search("(title)='(.*?)'>",x,re.M|re.I)
     f.write(bc.group(2)+"</br>")
+    i = i + 1
+    new = re.search(x,bd)
+    if new:
+        email()
     
         
             
