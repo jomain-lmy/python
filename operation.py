@@ -5,7 +5,7 @@ import sys
 import re 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
 
-def email():
+def email(x):
     import smtplib
     from email.mime.text import MIMEText
     from email.header import Header
