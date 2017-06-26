@@ -10,11 +10,11 @@ mail_pass="Lmy199864"   #口令
  
  
 sender = 'jomain@changewaver.com'
-receivers = ['1075823894@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+receivers = ['lmyundo@gmail.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
  
 message = MIMEText('fuck your mother', 'plain', 'utf-8')
 message['From'] = Header("jomain@changewaver.com", 'utf-8')
-message['To'] =  Header("1075823894@qq.com", 'utf-8')
+message['To'] =  Header("lmyundo@gmail.com", 'utf-8')
  
 subject = 'new'
 message['Subject'] = Header(subject, 'utf-8')
