@@ -23,7 +23,7 @@ def email(str):
     message['From'] = Header("jomain@changewaver.com", 'utf-8')
     message['To'] =  Header("1273046149@qq.com", 'utf-8')
  
-    subject = 'new'
+    subject = '来新消息啦，快去推送'
     message['Subject'] = Header(subject, 'utf-8')
     
  
