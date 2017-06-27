@@ -23,4 +23,5 @@
  修改收信人的邮箱地址，服务器git clone 后添加计划任务
  
 ## demo
-完整的程序在demo1.py中
+完整的程序在demo1.py中      
+另外：operation.py是对教务快讯通知提醒
