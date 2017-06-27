@@ -25,3 +25,5 @@
 ## demo
 完整的程序在demo1.py中      
 另外：operation.py是对教务快讯通知提醒
+## attention
+必须是python3 环境下运行
