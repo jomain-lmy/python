@@ -16,11 +16,11 @@ def email(str):
    
    
     sender = 'jomain@changewaver.com'
-    receivers = ['1273046149@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    receivers = ['bayu@ahu114.me']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
  
     message = MIMEText(hia, 'plain', 'utf-8')
     message['From'] = Header("jomain@changewaver.com", 'utf-8')
-    message['To'] =  Header("1273046149@qq.com", 'utf-8')
+    message['To'] =  Header("bayu@ahu114.me", 'utf-8')
  
     subject = '来新消息啦，快去看看'
     message['Subject'] = Header(subject, 'utf-8')
