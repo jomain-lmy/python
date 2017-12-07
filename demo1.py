@@ -3,7 +3,7 @@ import urllib.request
 import io  
 import sys  
 import re
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
+#sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
 def email(str):
     import smtplib
     from email.mime.text import MIMEText
@@ -34,12 +34,19 @@ def email(str):
         print ("邮件发送成功")
     except smtplib.SMTPException:
         print ("Error: 无法发送邮件")
+
+
+
+
+
+
+
 data = {}
 url = "http://jwc.ahu.cn/main/index.asp"
 data = urllib.request.urlopen(url).read()
 data = data.decode('gb2312','ignore')
 data1 = re.findall("<td>.*</table",data)
-with open('1.txt', 'rt', encoding='gb2312') as f:
+with open('1.txt', 'rt', encoding='utf-8') as f:
     old = f.readline()
 f.close()
 
@@ -61,7 +68,7 @@ for y in data3:
         if fuck:
             print("no")
         else:
-            email(new)
+            print(new)
 
 
 
