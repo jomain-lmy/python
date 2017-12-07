@@ -9,6 +9,8 @@ def email(str):
     from email.mime.text import MIMEText
     from email.header import Header
     hia = str
+    web = "http://jwc.ahu.cn/main/index.asp"
+    ojbk = hia + web
     # 第三方 SMTP 服务
     mail_host="smtp.mxhichina.com"  #设置服务器
     mail_user="jomain@changewaver.com"    #用户名
@@ -18,7 +20,7 @@ def email(str):
     sender = 'jomain@changewaver.com'
     receivers = ['bayu@ahu114.me']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
  
-    message = MIMEText(hia, 'plain', 'utf-8')
+    message = MIMEText(ojbk, 'plain', 'utf-8')
     message['From'] = Header("jomain@changewaver.com", 'utf-8')
     message['To'] =  Header("bayu@ahu114.me", 'utf-8')
  
@@ -46,7 +48,7 @@ url = "http://jwc.ahu.cn/main/index.asp"
 data = urllib.request.urlopen(url).read()
 data = data.decode('gb2312','ignore')
 data1 = re.findall("<td>.*</table",data)
-with open('1.txt', 'rt', encoding='utf-8') as f:
+with open('1.txt', 'rt', encoding='gb2312') as f:
     old = f.readline()
 f.close()
 
@@ -68,10 +70,14 @@ for y in data3:
         if fuck:
             print("no")
         else:
-            print(new)
+            email(new)
 
 
 
+
+
+#bayu@ahu114.me
+#1273046149@qq.com
 
 
 f.close()
